@@ -1,0 +1,20 @@
+C = .0000001;
+w = 2*pi*linspace(1, 10000, 100);
+Zeq1 = 1000./(1000*i*w*C + 1);
+H = (Zeq1)./(Zeq1 + 1000);
+semilogx(w./(2*pi), mag2db(abs(H)))
+title("Semilog |H(w)| = |Vout/Vin| (gain) v.s. freq (Hz)")
+ylabel("Vout/Vin (gain)")
+xlabel("frequency (Hz)")
+
+gain10Hz = interp1(w./(2*pi), mag2db(abs(H)), 10)
+gain20Hz = interp1(w./(2*pi), mag2db(abs(H)), 20)
+gain50Hz = interp1(w./(2*pi), mag2db(abs(H)), 50)
+gain100Hz = interp1(w./(2*pi), mag2db(abs(H)), 100)
+gain200Hz = interp1(w./(2*pi), mag2db(abs(H)), 200)
+gain500Hz = interp1(w./(2*pi), mag2db(abs(H)), 500)
+gain1000Hz = interp1(w./(2*pi), mag2db(abs(H)), 1000)
+gain2000Hz = interp1(w./(2*pi), mag2db(abs(H)), 2000)
+gain5000Hz = interp1(w./(2*pi), mag2db(abs(H)), 5000)
+gain10000Hz = interp1(w./(2*pi), mag2db(abs(H)), 10000)
+
