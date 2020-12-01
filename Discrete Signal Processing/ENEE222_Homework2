@@ -1,0 +1,47 @@
+%create discrete-time sinusoids and sample vector
+t = 0:1:15;
+x3 = cos((pi/2)*t);
+x4 = cos(pi*t);
+x5 = cos(2*pi*t);
+
+x6 = cos((1/2)*t);
+
+[x6max, ix6max] = max(x6)
+
+x7 = cos(t);
+x8 = cos(2*t);
+
+%plot discrete-time sinusoids
+figure(1)
+
+subplot(3,1,1), stem(t, x3) %plot x3
+title("x3 v.s. t"); %title
+xlabel("Sample (N) taken at 1 sample every 1 second(s)"); %xlabel
+ylabel("x3 = cos((pi/2)*t)"); %ylabel
+
+subplot(3,1,2), stem(t, x4) %plot x4
+title("x4 v.s. t"); %title
+xlabel("Sample (N) taken at 1 sample every 1 second(s)"); %xlabel
+ylabel("x4 = cos(pi*t)"); %ylabel
+
+subplot(3,1,3), stem(t, x5) %plot x5
+title("x5 v.s. t"); %title
+xlabel("Sample (N) taken at 1 sample every 1 second(s)"); %xlabel
+ylabel("x5 = cos(2*pi*t)"); %ylabel
+
+figure(2)
+
+subplot(3,1,1), stem(t, x6) %plot x6
+title("x6 v.s. t"); %title
+xlabel("Sample (N) taken at 1 sample every 1 second(s)"); %xlabel
+ylabel("x6 = cos((pi/2)*t)"); %ylabel
+
+subplot(3,1,2), stem(t, x7) %plot x7
+title("x7 v.s. t"); %title
+xlabel("Sample (N) taken at 1 sample every 1 second(s)"); %xlabel
+ylabel("x7 = cos(pi*t)"); %ylabel
+
+subplot(3,1,3), stem(t, x8) %plot x8
+title("x8 v.s. t"); %title
+xlabel("Sample (N) taken at 1 sample every 1 second(s)"); %xlabel
+ylabel("x8 = cos(2*pi*t)"); %ylabel
